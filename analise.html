@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Análise de Exames</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        textarea { width: 100%; height: 200px; margin: 10px 0; }
+        button { background: #007BFF; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+        .result { margin-top: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Analisador de Exames</h1>
+    <textarea id="exame" placeholder="Cole aqui o texto do exame..."></textarea>
+    <button onclick="analisarExame()">Analisar</button>
+    <div id="resultado" class="result"></div>
+
+    <script>
+        function analisarExame() {
+            const texto = document.getElementById("exame").value;
+            const resultadoDiv = document.getElementById("resultado");
+            
+            // Simulação de IA (substitua depois pela API real)
+            resultadoDiv.innerHTML = `
+                <h3>Resultado:</h3>
+                <p><strong>Valores fora do padrão:</strong></p>
+                <ul>
+                    <li>Glicemia: 207 mg/dL (normal: 60-99)</li>
+                </ul>
+                <p><strong>Valores normais:</strong></p>
+                <ul>
+                    <li>Hemoglobina: 15,0 g/dL (normal: 13,0-17,5)</li>
+                </ul>
+            `;
+        }
+    </script>
+</body>
+</html>
